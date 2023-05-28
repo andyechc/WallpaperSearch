@@ -1,0 +1,45 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ws{
+  width: 100%;
+  height: 100%;
+}
+
+.ws-info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  margin-bottom: 4em;
+}
+
+.ws-info-img{
+  width: 370px;
+}
+
+.ws-info-title{
+  font-size: 2.3em;
+  font-weight: 600;
+}
+
+.ws-info-text{
+ font-family: monospace;
+ font-size: 1.6em;
+ color: #fff;
+ opacity: .5;
+}
+
+.ws-quote a{
+  color: rgb(109, 95, 226);
+  transition: all 300ms
+}
+
+.ws-quote:hover a{
+  color: #0ff
+}
+

@@ -1,0 +1,22 @@
+.loading{
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  border: 5px solid #3A48E3;
+  border-top-color: transparent;
+  border-left-color: #3A48E3;
+  border-right-color: #3A48E3;
+  border-bottom-color: transparent;
+  animation: loading 1s infinite alternate;
+  position: absolute;
+  left: 44%;
+}
+
+
+@keyframes loading{
+  from{
+    transform: rotate(0);
+  }to{
+    transform: rotate(-360deg);
+  }
+}

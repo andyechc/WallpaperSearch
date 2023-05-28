@@ -9,17 +9,13 @@ export function Response({error, isLoading, photoList}){
     <>
       <Error error={error}/>
       <article className="ws-response">
-        {
-          isLoading &&
-            <Loading />
-        }
-      <PhotoList photoList={photoList}/>
+        <Loading isLoading={isLoading}/>
+        <PhotoList photoList={photoList}/>
       </article>
       {
         photoList &&
           <GoPlaceButton placeToGo='#input' text='Subir'/>
-      }
-      
+      }      
     </>
   )
 }

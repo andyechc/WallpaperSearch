@@ -1,7 +1,10 @@
 import './Loading.css'
-//this logo is a spinner with an animation
-export function Loading(){
+//a spinner with an animation
+export function Loading({isLoading}){
   return(
-    <div className="loading"></div>
+    <>
+      isLoading &&
+        <div className="loading"></div>
+    </>
   )
 }

@@ -9,7 +9,7 @@
   height: 100%;
 }
 
-.ws-info{
+.ws-header{
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -18,16 +18,16 @@
   margin-bottom: 4em;
 }
 
-.ws-info-img{
+.ws-header-img{
   width: 370px;
 }
 
-.ws-info-title{
+.ws-header-title{
   font-size: 2.3em;
   font-weight: 600;
 }
 
-.ws-info-text{
+.ws-header-text{
  font-family: monospace;
  font-size: 1.6em;
  color: #fff;

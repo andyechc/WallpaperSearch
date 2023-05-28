@@ -10,7 +10,7 @@ lerna-debug.log*
 src/logic/service.js
 
 node_modules
-dist
+# dist
 dist-ssr
 *.local
 

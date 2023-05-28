@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useGetPhotoList } from '../../hooks/useGetPhotoList.jsx'
+import { useGetPhotoList } from '../../hooks/useGetPhotoList.js'
 //CSS
 import './InputSearch.css'
 //Components

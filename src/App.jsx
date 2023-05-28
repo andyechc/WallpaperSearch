@@ -1,22 +1,24 @@
 import './App.css'
 //components
-import {InputSearch} from './Components/InputSearch.jsx'
-import {Footer} from './Components/footer.jsx'
-import {Logo} from './Components/Logo.jsx'
+import { InputSearch } from './Components/InputSearch/InputSearch.jsx'
+import { Footer } from './Components/Footer/footer.jsx'
+import { Logo } from './Components/Logo/Logo.jsx'
 
 export default function App() {
   return (
-    <main className="ws">
-      <section className="ws-info">
+    <div className="ws">
+      <header className="ws-header">
         <Logo />
-        <span className="ws-info-title">Wallpaper Search</span>
-        <span className="ws-info-text">Contamos con una increíble cantidad de imagenes...</span>
-      </section>
+        <span className="ws-header-title">Wallpaper Search</span>
+        <span className="ws-header-text">Contamos con una increíble cantidad de imagenes...</span>
+      </header>
       
-      <InputSearch />
-      <span className='ws-quote'>Potencializado por <a href='https://unsplash.com'>Unsplash</a></span>
+      <main>
+        <InputSearch />
+        <span className='ws-quote'>Potencializado por <a href='https://unsplash.com'>Unsplash</a></span>
+      </main>
       <Footer/>
-    </main>
+    </div>
   )
 }
   

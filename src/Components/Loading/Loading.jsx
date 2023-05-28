@@ -3,8 +3,10 @@ import './Loading.css'
 export function Loading({isLoading}){
   return(
     <>
+      {
       isLoading &&
         <div className="loading"></div>
+      }
     </>
   )
 }

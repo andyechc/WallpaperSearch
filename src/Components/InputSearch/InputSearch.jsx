@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { useGetPhotoList } from '../hooks/useGetPhotoList'
+import { useGetPhotoList } from '../../hooks/useGetPhotoList.jsx'
 //CSS
 import './InputSearch.css'
 //Components
-import {Response} from './Response.jsx'
+import {Response} from '../Response/Response.jsx'
 
 export function InputSearch() {
   //this state is the query that recive the API to search the photolist
@@ -15,7 +15,6 @@ export function InputSearch() {
     event.preventDefault()
     //setting the error to null to clear the image loading screen in case you already found an error before
     err && setErr()
-    //
     const keywords = document.getElementById('input').value
     //the user's fetch is stored in a var and given to the state to handle the fetch
     setQuery(keywords)

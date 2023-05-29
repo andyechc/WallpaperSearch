@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
 
 .ws-logo {
   box-shadow: 0 15px 40px -10px #000;
@@ -16,7 +16,7 @@
   mix-blend-mode: lighten;
   position: relative;
   font-weight: 600;
-  font-family: 'Carter One', Arial, Helvetica, sans-serif;
+  font-family: 'Fugaz One', Arial, Helvetica, sans-serif;
   animation: logo 30s infinite;
 }
 

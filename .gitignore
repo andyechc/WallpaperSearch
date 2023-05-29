@@ -7,10 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-src/logic/service.js
+# src/logic/service.js
 
 node_modules
-# dist
+dist
 dist-ssr
 *.local
 

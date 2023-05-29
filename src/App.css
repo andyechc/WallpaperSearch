@@ -4,12 +4,12 @@
   text-align: center;
 }
 
-.ws{
+.ws {
   width: 100%;
   height: 100%;
 }
 
-.ws-header{
+.ws-header {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -18,28 +18,27 @@
   margin-bottom: 4em;
 }
 
-.ws-header-img{
+.ws-header-img {
   width: 370px;
 }
 
-.ws-header-title{
+.ws-header-title {
   font-size: 2.3em;
   font-weight: 600;
 }
 
-.ws-header-text{
- font-family: monospace;
- font-size: 1.6em;
- color: #fff;
- opacity: .5;
+.ws-header-text {
+  font-family: monospace;
+  font-size: 1.6em;
+  color: #fff;
+  opacity: .5;
 }
 
-.ws-quote a{
+.ws-quote a {
   color: rgb(109, 95, 226);
   transition: all 300ms
 }
 
-.ws-quote:hover a{
+.ws-quote:hover a {
   color: #0ff
 }
-

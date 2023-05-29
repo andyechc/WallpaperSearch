@@ -1,10 +1,10 @@
 import './Loading.css'
 //a spinner with an animation
-export function Loading({isLoading}){
-  return(
+export function Loading({ isLoading }) {
+  return (
     <>
       {
-      isLoading &&
+        isLoading &&
         <div className="loading"></div>
       }
     </>

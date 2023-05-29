@@ -1,10 +1,10 @@
-.ws-form{
+.ws-form {
   position: relative;
   width: 100%;
   margin: 20px 0;
 }
 
-.ws-form-input{
+.ws-form-input {
   padding: 10px 50px 10px 20px;
   width: 100%;
   border-radius: 1000px;
@@ -17,19 +17,19 @@
   transition: all 300ms;
 }
 
-.ws-form-input::placeholder{
+.ws-form-input::placeholder {
   color: #ffffff86;
 }
 
-.ws-form-input:focus{
+.ws-form-input:focus {
   box-shadow: 0 10px 40px -10px #07c;
 }
 
-.ws-form-button{
+.ws-form-button {
   position: absolute;
   top: 3%;
   right: 2%;
-  transform:rotate(-40deg);
+  transform: rotate(-40deg);
   width: 40px;
   height: 40px;
   font-size: 2em;
@@ -39,5 +39,3 @@
   border-radius: 100%;
   cursor: pointer;
 }
-
-

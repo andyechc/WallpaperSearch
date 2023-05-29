@@ -1,4 +1,4 @@
-.ws-footer{
+.ws-footer {
   display: block;
   max-width: 100%;
   height: 60px;
@@ -12,12 +12,12 @@
   border-top: 1px solid rgb(109, 95, 226);
 }
 
-.ws-footer-link{
+.ws-footer-link {
   text-decoration: none;
   color: #fff;
   transition: all 300ms;
 }
 
-.ws-footer-link:hover{
+.ws-footer-link:hover {
   color: #0ff;
 }

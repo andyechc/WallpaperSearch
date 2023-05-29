@@ -1,4 +1,4 @@
-.ws-response{
+.ws-response {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -6,4 +6,3 @@
   gap: 2em;
   margin-bottom: 2em;
 }
-

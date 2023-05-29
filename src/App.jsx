@@ -12,13 +12,12 @@ export default function App() {
         <span className="ws-header-title">Wallpaper Search</span>
         <span className="ws-header-text">Contamos con una increíble cantidad de imagenes...</span>
       </header>
-      
+
       <main>
         <InputSearch />
         <span className='ws-quote'>Potencializado por <a href='https://unsplash.com'>Unsplash</a></span>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
-  

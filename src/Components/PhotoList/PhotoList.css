@@ -1,8 +1,6 @@
 .ws-response-item {
   width: 100%;
   height: max-content;
-  display: flex;
-  flex-direction: column;
   border: 1px solid #ccc;
   border-radius: 10px;
   background: #111;

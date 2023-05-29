@@ -9,7 +9,7 @@ export default function App() {
     <div className="ws">
       <header className="ws-header" id='header'>
         <Logo />
-        <span className="ws-header-title">Wallpaper Search</span>
+        <span className="ws-header-title">Image Search</span>
         <span className="ws-header-text">Contamos con una increíble cantidad de imagenes...</span>
       </header>
 

@@ -8,6 +8,7 @@
   font-weight: 600;
   font-family: Monospace;
   animation: logo 30s infinite;
+  word-spacing: 0em;
 }
 
 @keyframes logo {

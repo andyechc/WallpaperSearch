@@ -1,4 +1,4 @@
-export async function searchPhotos(COMPLETE_URL) {
+export async function fetchPhotos(COMPLETE_URL) {
   try {
     const response = await fetch(COMPLETE_URL)
     if (response.status === 200) {

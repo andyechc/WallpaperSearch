@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useGetPhotoList } from '../../hooks/useGetPhotoList.js'
+import { usePhotoList } from '../../hooks/usePhotoList.js'
 //CSS
 import './InputSearch.css'
 //Components
@@ -9,7 +9,7 @@ export function InputSearch() {
   //this state is the query that recive the API to search the photolist
   const [query, setQuery] = useState()
   // This custom hooks has the function of fetching the api and returning the error and the list of images
-  const { photoList, err, setErr, isLoading, setIsLoading } = useGetPhotoList({ query })
+  const { mappedPhotoList, err, setErr, isLoading, setIsLoading } = usePhotoList({ query })
 
   const handleSumit = event => {
     event.preventDefault()
@@ -28,7 +28,7 @@ export function InputSearch() {
         <button className="ws-form-button">⚲</button>
       </form>
 
-      <Response error={err} isLoading={isLoading} photoList={photoList} />
+      <Response error={err} isLoading={isLoading} mappedPhotoList={mappedPhotoList} />
     </>
   )
 } 

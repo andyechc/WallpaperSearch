@@ -15,7 +15,7 @@ export function Response({ error, isLoading, photoList }) {
       </article>
       {
         photoList &&
-        <GoPlaceButton placeToGo='#input' text='Subir' />
+        <GoPlaceButton placeToGo='#header' text='Subir' />
       }
     </>
   )

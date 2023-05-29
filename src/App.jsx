@@ -7,7 +7,7 @@ import { Logo } from './Components/Logo/Logo.jsx'
 export default function App() {
   return (
     <div className="ws">
-      <header className="ws-header">
+      <header className="ws-header" id='header'>
         <Logo />
         <span className="ws-header-title">Wallpaper Search</span>
         <span className="ws-header-text">Contamos con una increíble cantidad de imagenes...</span>

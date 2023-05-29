@@ -9,7 +9,7 @@ export function InputSearch() {
   //this state is the query that recive the API to search the photolist
   const [query, setQuery] = useState()
   // This custom hooks has the function of fetching the api and returning the error and the list of images
-  const { mappedPhotoList, err, setErr, isLoading, setIsLoading } = usePhotoList({ query })
+  const { photoList, err, setErr, isLoading, setIsLoading } = usePhotoList({ query })
 
   const handleSumit = event => {
     event.preventDefault()
@@ -19,9 +19,13 @@ export function InputSearch() {
     //the user's query is stored in a var and given to the state to handle the fetch
     setQuery(userQuery)
     //validations
-    userQuery == ''
-    ? setErr('No se puede realizar una busqueda vacia.')
-    : setIsLoading(true)
+    if (userQuery === query) {
+      return
+    }
+    else userQuery == ''
+      ? setErr('No se puede realizar una busqueda vacia.')
+      : setIsLoading(true)
+
   }
 
   return (
@@ -31,7 +35,7 @@ export function InputSearch() {
         <button className="ws-form-button">⚲</button>
       </form>
 
-      <Response error={err} isLoading={isLoading} mappedPhotoList={mappedPhotoList} />
+      <Response error={err} isLoading={isLoading} photoList={photoList} />
     </>
   )
 } 

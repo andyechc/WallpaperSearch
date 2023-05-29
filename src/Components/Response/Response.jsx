@@ -5,16 +5,16 @@ import { GoPlaceButton } from '../GoPlaceButton/GoPlaceButton.jsx'
 import { Error } from '../Error/Error.jsx'
 import { PhotoList } from '../PhotoList/PhotoList.jsx'
 
-export function Response({ error, isLoading, mappedPhotoList }) {
+export function Response({ error, isLoading, photoList }) {
   return (
     <>
       <Error error={error} />
       <article className="ws-response">
         <Loading isLoading={isLoading} />
-        <PhotoList mappedPhotoList={mappedPhotoList} />
+        <PhotoList photoList={photoList} />
       </article>
       {
-        mappedPhotoList &&
+        photoList &&
         <GoPlaceButton placeToGo='#input' text='Subir' />
       }
     </>

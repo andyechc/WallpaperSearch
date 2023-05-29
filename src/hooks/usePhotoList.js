@@ -4,7 +4,7 @@ import { ENDPOINT_API_IMG_URL, API_KEY } from '../logic/service.js'
 import { fetchPhotos } from '../logic/fetchPhotos.js'
 
 export function usePhotoList({ query }) {
-  const [photoList, setPhotoList] = useState()
+  const [photoList, setPhotoList] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
   const [err, setErr] = useState()
 
@@ -13,9 +13,12 @@ export function usePhotoList({ query }) {
       const COMPLETE_URL = ENDPOINT_API_IMG_URL(query) + API_KEY
       fetchPhotos(COMPLETE_URL).then(({ type, value }) => {
         //this validation is performed with objects to check if the fetch returned the response correctly or an error
-        type === 'data'
-          ? setPhotoList(value)
-          : setErr(value)
+        if (type === 'data') {
+          value.length == 0
+            ? (setErr('No se encontraron resultados'), setPhotoList(null))
+            : setPhotoList(value)
+        } else setErr(value)
+
         setIsLoading(false)
       })
     }
@@ -29,5 +32,5 @@ export function usePhotoList({ query }) {
       download: photo.links.download
     }
   ))
-  return ({ mappedPhotoList, err, setErr, isLoading, setIsLoading })
+  return ({ photoList: mappedPhotoList, err, setErr, isLoading, setIsLoading })
 }

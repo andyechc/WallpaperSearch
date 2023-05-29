@@ -1,4 +1,6 @@
-.ws-logo{
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+.ws-logo {
   box-shadow: 0 15px 40px -10px #000;
   padding: 20px;
   min-width: 200px;
@@ -14,7 +16,7 @@
   mix-blend-mode: lighten;
   position: relative;
   font-weight: 600;
-  font-family: Monospace;
+  font-family: 'Carter One', Arial, Helvetica, sans-serif;
   animation: logo 30s infinite;
 }
 

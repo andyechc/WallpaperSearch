@@ -15,16 +15,19 @@ export function InputSearch() {
     event.preventDefault()
     //setting the error to null to clear the image loading screen in case you already found an error before
     err && setErr()
-    const keywords = document.getElementById('input').value
-    //the user's fetch is stored in a var and given to the state to handle the fetch
-    setQuery(keywords)
-    setIsLoading(true)
+    const { userQuery } = Object.fromEntries(new window.FormData(event.target))
+    //the user's query is stored in a var and given to the state to handle the fetch
+    setQuery(userQuery)
+    //validations
+    userQuery == ''
+    ? setErr('No se puede realizar una busqueda vacia.')
+    : setIsLoading(true)
   }
 
   return (
     <>
       <form onSubmit={handleSumit} className="ws-form">
-        <input id="input" className="ws-form-input" placeholder="Explora el Universo..." type="search" />
+        <input name="userQuery" className="ws-form-input" placeholder="Explora el Universo..." type="search" />
         <button className="ws-form-button">⚲</button>
       </form>
 

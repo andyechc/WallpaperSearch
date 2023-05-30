@@ -1,13 +1,13 @@
-- name: Vite Github Pages Deployer
+name: Vite Github Pages Deployer
 
   # You may pin to the exact commit or the version.
 
   # uses: skywarth/vite-github-pages-deployer@c90e1fa4391d6740ba83549839c9b8109fecb531
 
 
-  uses: skywarth/vite-github-pages-deployer@v1.1.0
+uses: skywarth/vite-github-pages-deployer@v1.1.0
 
-  with:
+with:
 
     # Public base path string for vite, this affects the routing, history and asset links. Make sure to provide appropriately since Github Pages stores your app in a directory under a subdomain.
 

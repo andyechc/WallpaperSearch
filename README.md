@@ -1,6 +1,6 @@
 # Wallpaper Search App 🖼️
 
-Esta es una aplicación web construida con React que permite a los usuarios buscar fondos de pantalla. La aplicación utiliza la potencia de los hooks `useState` y `useEffect` de React para gestionar el estado y realizar la obtención de datos de la API de Unsplash 📸. También utiliza hooks personalizados e implementa el manejo de errores. 😊
+Esta es una aplicación web construida con React⚛️ que permite a los usuarios buscar fondos de pantalla. La aplicación utiliza la potencia de los hooks `useState` y `useEffect` de React para gestionar el estado y realizar la obtención de datos de la API de Unsplash 📸. También utiliza hooks personalizados e implementa el manejo de errores. 😊
 
 ## Características 🌟
 

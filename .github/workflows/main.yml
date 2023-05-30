@@ -1,29 +1,72 @@
-- name: Vite Github Pages Deployer
+name: Deploy using published action
 
-  # You may pin to the exact commit or the version.
+on:
 
-  # uses: skywarth/vite-github-pages-deployer@c90e1fa4391d6740ba83549839c9b8109fecb531
+  # Runs on pushes targeting the default branch
 
-  uses: skywarth/vite-github-pages-deployer@v1.1.0
+  push:
 
-  with:
+    branches: ["main"]
 
-    # Public base path string for vite, this affects the routing, history and asset links. Make sure to provide appropriately since Github Pages stores your app in a directory under a subdomain.
+  # Allows you to run this workflow manually from the Actions tab
 
-    public_base_path: # optional, default is /${{ github.event.repository.name }}
+  workflow_dispatch:
 
-    # Which folder do you want your Github Page to use as root directory. Usually it is your build output directory such as ./dist 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 
-    build_path: # optional, default is ./dist
+permissions:
 
-    # Desired name for the Deployment environment. It is also the exposed artifact name which contains the build output (dist).
+  contents: read
 
-    artifact_name: # optional, default is github-pages
+  pages: write
 
-    # Controls the debug mode, boolean, true is for on. When turned on, it'll output certain information on certain steps. Mainly used for development, but use it as you please to inspect your env and variables.
+  id-token: write
 
-    debug_mode: # optional, default is false
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 
-    # Your preference of package manager: 'npm' and 'yarn' are possible values.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 
-    package_manager: # optional, default is npm
+concurrency:
+
+  group: "pages"
+
+  cancel-in-progress: false
+
+  
+
+  
+
+jobs:
+
+  # Build job
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    environment:
+
+      name: demo
+
+      url: ${{ steps.deploy_to_pages.outputs.github_pages_url }}
+
+    steps:
+
+      - name: Checkout
+
+        uses: actions/checkout@v3
+
+      - name: Vite Github Pages Deployer
+
+        uses: skywarth/vite-github-pages-deployer@master
+
+        id: deploy_to_pages
+
+      - name: dump outputs
+
+        run:  echo "${{steps.deploy_to_pages.outputs.github_pages_url}}"
+
+      
+
+      
+     

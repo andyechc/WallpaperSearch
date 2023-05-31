@@ -1,9 +1,17 @@
-export async function fetchPhotos(COMPLETE_URL) {
+export async function fetchPhotos(ENDPOINT) {
   try {
-    const response = await fetch(COMPLETE_URL)
+    const response = await fetch(ENDPOINT)
     if (response.status === 200) {
       const data = await response.json()
-      return { type: 'data', value: data.results }
+      const mappedPhotoList = data.results.map((photo) => (
+        {
+          id: photo.id,
+          src: photo.urls.small,
+          alt: photo.alt_description,
+          download: photo.links.download
+        }
+      ))
+      return { type: 'data', value: mappedPhotoList }
     } else {
       return { type: 'error', value: "Error Code: " + response.status }
     }

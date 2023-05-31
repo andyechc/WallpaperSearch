@@ -10,7 +10,7 @@ export function PhotoList({ photoList }) {
             <img className="ws-response-item-img" src={photo.src} alt={photo.alt} />
             <div className="ws-response-item-info">
               <button className="ws-response-item-info-button">
-                <a target='_blank' href={photo.download}><span className="material-symbols-outlined">download</span></a>
+                <a target='_blank' download='image.jpg' href={photo.download}><span className="material-symbols-outlined">download</span></a>
               </button>
             </div>
           </div>

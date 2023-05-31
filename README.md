@@ -37,4 +37,5 @@ Además de utilizar los hooks integrados como `useState` y `useEffect`, la aplic
 - Los creadores de React y la increíble comunidad de React.
 - Los desarrolladores de la API de Unsplash por proporcionar imágenes impresionantes.
 
-
+## Estado del Deploy
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a8819778-04b8-436b-9958-35757b675c7a/deploy-status)](https://app.netlify.com/sites/wallsearch/deploys)
